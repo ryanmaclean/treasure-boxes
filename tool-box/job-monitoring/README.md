@@ -4,7 +4,13 @@ This workflow retrieves the detail of jobs in status `queued` and `running` ever
 # Installation
 
 ## Create a destination table if you haven't yet.
-you can change DB and Table as you want
+You can change DB and Table as you want. Modify `td.database` and `td.table` under the `_export:`.
+
+|Variable|Description|Default|
+|:---|:---|:---|
+|`td.database`|A database name which contains the destination table.|`monitoring`|
+|`td.table`|A table name you want to store the result into.|`td_job_queue`|
+
 ```
 $ td db:create monitoring
 $ td table:create monitoring td_job_queue
@@ -21,7 +27,3 @@ $ td wf secrets --project job-monitoring --set td.apikey td.apiserver td.databas
 |:---|:---|:---|
 |`td.apikey`|An API key to be used in the script. Access Type must be `Master Key`.|`1234/abcdefghijklmnopqrstuvwxyz1234567890`|
 |`td.apiserver`|TD's API endpoint starting with `https://`.|`https://api.treasuredata.com`|
-|`td.database`|A database name which contains the destination table.|`monitoring`|
-|`td.table`|A table name you want to store the result into.|`td_job_queue`|
-
-

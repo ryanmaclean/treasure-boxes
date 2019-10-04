@@ -1,7 +1,7 @@
 +step1:
   docker:
     image: "armtd/td-ml:2019.09.3-stretch"
- 
+
   py>: scripts.ytm.call_api
   sql: queries/get_userlist.sql
   url: http://s.tgm.yahoo-net.jp/api?site=YOUR_SITE_IDZ&referrer=api_treasuredata&YOUR_COOKIE_PARAM=insert_bt:userid_here

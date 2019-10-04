@@ -11,4 +11,4 @@ schedule:
   dest_table: row_count
   _env:
     td_apikey: ${secret:td.apikey}
-    td.apiserver: ${secret:td.apiserver}
+    td_endpoint: ${secret:td.apiserver}
