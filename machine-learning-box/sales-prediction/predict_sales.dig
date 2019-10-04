@@ -10,7 +10,7 @@ _export:
     image: 'armtd/td-ml:2019.09'
   _env:
     TD_API_KEY: ${secret:td.apikey}
-    TD_API_SERVER: ${secret:td.endpoint}
+    TD_API_SERVER: ${secret:td.apiserver}
     AWS_ACCESS_KEY_ID: ${secret:s3.access_key_id}
     AWS_SECRET_ACCESS_KEY: ${secret:s3.secret_access_key}
     S3_BUCKET: ${secret:s3.bucket}

@@ -43,8 +43,8 @@ You also can try [Spark.ml collaborative filtering](https://spark.apache.org/doc
 ```sh
 $ ./data.sh
 $ td wf push recommendation
-$ td wf secrets --project recommendation --set td.apikey --set td/endpoint
-# Set secrets from STDIN like: td.apikey=1/xxxxx, td.endpoint=https://api.treasuredata.com
+$ td wf secrets --project recommendation --set td.apikey --set td.apiserver
+# Set secrets from STDIN like: td.apikey=1/xxxxx, td.apiserver=https://api.treasuredata.com
 $ td wf start recommendation recommend_spark --session now
 ```
 

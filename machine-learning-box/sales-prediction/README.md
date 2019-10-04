@@ -25,11 +25,11 @@ $ td workflow push prophet
 $ td workflow secrets \
  --project prophet \
   --set td.apikey \
-  --set td.endpoint \
+  --set td.apiserver \
   --set s3.bucket \
   --set s3.access_key_id \
   --set s3.secret_access_key
-# Set secrets from STDIN like: td.apikey=1/xxxxx, td.endpoint=https://api.treasuredata.com, s3.bucket=$S3_BUCKET,
+# Set secrets from STDIN like: td.apikey=1/xxxxx, td.apiserver=https://api.treasuredata.com, s3.bucket=$S3_BUCKET,
 #              s3.access_key_id=AAAAAAAAAA, s3.secret_access_key=XXXXXXXXX
 $ td workflow start prophet predict_sales --session now
 ```
@@ -44,8 +44,8 @@ $ td workflow push prophet
 $ td workflow secrets \
  --project prophet \
   --set td.apikey \
-  --set td.endpoint \
-# Set secrets from STDIN like: td.apikey=1/xxxxx, td.endpoint=https://api.treasuredata.com
+  --set td.apiserver \
+# Set secrets from STDIN like: td.apikey=1/xxxxx, td.apiserver=https://api.treasuredata.com
 $ td workflow start prophet predict_sales_simple --session now
 ```
 

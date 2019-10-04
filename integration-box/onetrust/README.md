@@ -49,7 +49,7 @@ td wf secret --project onetrust_integration --set onetrustapikeys.yml #create a 
 | `ot.collectionendpoint`   | This endpoint configured as secret is used to get all the collection points configured in a website. Example : subscription webform where a data subject fills his/her PII data and consent to purposes is treated as one collection point | latest api end point details can be accesed through [OneTrust Developer Portal](https://developer.onetrust.com/consent-manager "OneTrust Developer Portal") .  Currently OneTrust hasnt made API documentation public.    |
 | `ot.datasubjectpurpose`| This endpoint configured as secret is used to get all the datasubjects and the purpose to which they have consented . Example : John.Doe@abc.com is a datasubject who consented to purpose Marketing Analytics | latest api end point details can be accesed through [OneTrust Developer Portal](https://developer.onetrust.com/consent-manager "OneTrust Developer Portal") .  Currently OneTrust hasnt made API documentation public.  |
 | `td.apikey` | An API key to be used in the script. Access Type must be `Master Key` | `1234/abcdefghijklmnopqrstuvwxyz1234567890` |
-|`td.endpoint`| TD's API endpoint starting with `https:// ` | `https://api.treasuredata.com` | 
+|`td.apiserver`| TD's API endpoint starting with `https:// ` | `https://api.treasuredata.com` | 
 
 Note: Refer [OneTrust Developer Portal ](https://developer.onetrust.com "OneTrust Developer Portal ") to identify the different endpoints. 
 

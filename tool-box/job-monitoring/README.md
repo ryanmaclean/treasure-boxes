@@ -14,13 +14,13 @@ $ td table:create monitoring td_job_queue
 All of four variables are required.
 ```
 $ td wf push job-monitoring
-$ td wf secrets --project job-monitoring --set td.apikey td.endpoint td.database td.table
+$ td wf secrets --project job-monitoring --set td.apikey td.apiserver td.database td.table
 ```
 
 |Variable|Description|Example|
 |:---|:---|:---|
 |`td.apikey`|An API key to be used in the script. Access Type must be `Master Key`.|`1234/abcdefghijklmnopqrstuvwxyz1234567890`|
-|`td.endpoint`|TD's API endpoint starting with `https://`.|`https://api.treasuredata.com`|
+|`td.apiserver`|TD's API endpoint starting with `https://`.|`https://api.treasuredata.com`|
 |`td.database`|A database name which contains the destination table.|`monitoring`|
 |`td.table`|A table name you want to store the result into.|`td_job_queue`|
 

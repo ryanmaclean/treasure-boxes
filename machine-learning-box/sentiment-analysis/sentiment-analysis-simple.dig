@@ -11,7 +11,7 @@ _export:
 +test:
   echo>: ${endpoint}
   _env:
-    endpoint: ${secret:td.endpoint}
+    endpoint: ${secret:td.apiserver}
 
 +train:
   py>: sentiment.run
@@ -20,4 +20,4 @@ _export:
     image: 'armtd/td-ml:2019.09'
   _env:
     TD_API_KEY: ${secret:td.apikey}
-    TD_API_SERVER: ${secret:td.endpoint}
+    TD_API_SERVER: ${secret:td.apiserver}

@@ -6,7 +6,7 @@
         image: "armtd/td-script:2019.09"
     _env:
         TD_API_KEY: ${secret:td.apikey}
-        TD_API_SERVER: ${secret:td.endpoint}
+        TD_API_SERVER: ${secret:td.apiserver}
 
 +write_into_td:
     py>: py_scripts.examples.write_td_table
@@ -16,4 +16,4 @@
         image: "armtd/td-script:2019.09"
     _env:
         TD_API_KEY: ${secret:td.apikey}
-        TD_API_SERVER: ${secret:td.endpoint}
+        TD_API_SERVER: ${secret:td.apiserver}

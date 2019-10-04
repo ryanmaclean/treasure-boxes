@@ -7,6 +7,6 @@ schedule:
     py>: job-monitoring.monitoring
     _env:
         td_apikey: ${secret:td.apikey}
-        td_endpoint: ${secret:td.endpoint}
+        td.apiserver: ${secret:td.apiserver}
         td_database: ${secret:td.database}
         td_table: ${secret:td.table}

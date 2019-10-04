@@ -6,7 +6,7 @@
     image: 'armtd/td-ml:2019.09'
   _env:
     TD_API_KEY: ${secret:td.apikey}
-    TD_API_SERVER: ${secret:td.endpoint}
+    TD_API_SERVER: ${secret:td.apiserver}
 
 +td_spark_sql:
   py>: py_scripts.td-spark.execute_sql
@@ -16,7 +16,7 @@
     image: 'armtd/td-ml:2019.09'
   _env:
     TD_API_KEY: ${secret:td.apikey}
-    TD_API_SERVER: ${secret:td.endpoint}
+    TD_API_SERVER: ${secret:td.apiserver}
 
 +td_spark_upload:
   py>: py_scripts.td-spark.upload_dataframe
@@ -26,4 +26,4 @@
     image: 'armtd/td-ml:2019.09'
   _env:
     TD_API_KEY: ${secret:td.apikey}
-    TD_API_SERVER: ${secret:td.endpoint}
+    TD_API_SERVER: ${secret:td.apiserver}

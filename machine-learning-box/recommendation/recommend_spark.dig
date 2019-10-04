@@ -14,4 +14,4 @@ _export:
     image: "armtd/td-ml:2019.09"
   _env:
     TD_API_KEY: ${secret:td.apikey}
-    TD_API_SERVER: ${secret:td.endpoint}
+    TD_API_SERVER: ${secret:td.apiserver}
