@@ -11,22 +11,22 @@ _export:
 +train:
   py>: sentiment.run
   docker:
-    image: 'digdag/digdag-python:3.7'
+    image: 'armtd/td-ml:2019.09'
   _env:
-    TD_API_KEY: ${secret:apikey}
-    TD_API_SERVER: ${secret:endpoint}
-    AWS_ACCESS_KEY_ID: ${secret:aws_access_key_id}
-    AWS_SECRET_ACCESS_KEY: ${secret:aws_secret_access_key}
-    S3_BUCKET: ${secret:s3_bucket}
+    TD_API_KEY: ${secret:td.apikey}
+    TD_API_SERVER: ${secret:td.endpoint}
+    AWS_ACCESS_KEY_ID: ${secret:s3.access_key_id}
+    AWS_SECRET_ACCESS_KEY: ${secret:s3.secret_access_key}
+    S3_BUCKET: ${secret:s3.bucket}
 
 # Fetch the pre-trained model from S3, then store prediction results to TD
 #+predict:
 #  py>: predict.run
 #  docker:
-#    image: 'digdag/digdag-python:3.7'
+#    image: 'armtd/td-ml:2019.09'
 #  _env:
-#    TD_API_KEY: ${secret:apikey}
-#    TD_API_SERVER: ${secret:endpoint}
-#    AWS_ACCESS_KEY_ID: ${secret:aws_access_key_id}
-#    AWS_SECRET_ACCESS_KEY: ${secret:aws_secret_access_key}
-#    S3_BUCKET: ${secret:s3_bucket}
+#    TD_API_KEY: ${secret:td,apikey}
+#    TD_API_SERVER: ${secret:td.endpoint}
+#    AWS_ACCESS_KEY_ID: ${secret:s3.access_key_id}
+#    AWS_SECRET_ACCESS_KEY: ${secret:s3.secret_access_key}
+#    S3_BUCKET: ${secret:s3.bucket}

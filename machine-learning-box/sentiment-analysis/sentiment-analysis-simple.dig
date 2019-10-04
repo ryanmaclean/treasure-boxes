@@ -8,11 +8,16 @@ _export:
   call>: common/prepare.dig
 
 # Train with pre-trained model on TensorFlow Hub and store prediction results to TD
++test:
+  echo>: ${endpoint}
+  _env:
+    endpoint: ${secret:td.endpoint}
+
 +train:
   py>: sentiment.run
   with_aws: false
   docker:
-    image: 'digdag/digdag-python:3.7'
+    image: 'armtd/td-ml:2019.09'
   _env:
-    TD_API_KEY: ${secret:apikey}
-    TD_API_SERVER: ${secret:endpoint}
+    TD_API_KEY: ${secret:td.apikey}
+    TD_API_SERVER: ${secret:td.endpoint}

@@ -25,13 +25,13 @@ $ ./data.sh # prepare example data
 $ td workflow push sentiment
 $ td workflow secrets \
   --project sentiment \
-  --set apikey \
-  --set endpoint \
-  --set s3_bucket \
-  --set aws_access_key_id \
-  --set aws_secret_access_key
-# Set secrets from STDIN like: apikey=1/xxxxx, endpoint=https://api.treasuredata.com, s3_bucket=$S3_BUCKET,
-#              aws_access_key_id=AAAAAAAAAA, aws_secret_access_key=XXXXXXXXX
+  --set td.apikey \
+  --set td.endpoint \
+  --set s3.bucket \
+  --set s3.access_key_id \
+  --set s3.secret_access_key
+# Set secrets from STDIN like: td.apikey=1/xxxxx, td.endpoint=https://api.treasuredata.com, s3.bucket=$S3_BUCKET,
+#              s3.access_key_id=AAAAAAAAAA, s3.secret_access_key=XXXXXXXXX
 $ td workflow start sentiment sentiment-analysis --session now
 ```
 
@@ -46,9 +46,9 @@ $ ./data.sh # prepare example data
 $ td workflow push sentiment
 $ td workflow secrets \
   --project sentiment \
-  --set apikey \
-  --set endpoint
-# Set secrets from STDIN like: apikey=1/xxxxx, endpoint=https://api.treasuredata.com
+  --set td.apikey \
+  --set td.endpoint
+# Set secrets from STDIN like: td.apikey=1/xxxxx, td.endpoint=https://api.treasuredata.com
 $ td workflow start sentiment sentiment-analysis-simple --session now
 ```
 
@@ -65,9 +65,9 @@ $ ./data.sh # prepare example data
 $ td workflow push sentiment
 $ td workflow secrets \
   --project sentiment \
-  --set apikey \
-  --set endpoint
-# Set secrets from STDIN like: apikey=1/xxxxx, endpoint=https://api.treasuredata.com
+  --set td.apikey \
+  --set td.endpoint
+# Set secrets from STDIN like: td.apikey=1/xxxxx, td.endpoint=https://api.treasuredata.com
 $ td workflow start sentiment sentiment-analysis-chainer --session now
 ```
 

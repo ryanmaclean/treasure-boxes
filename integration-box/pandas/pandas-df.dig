@@ -3,17 +3,17 @@
     database_name: sample_datasets
     table_name: nasdaq
     docker:
-        image: "digdag/digdag-python:3.7"
+        image: "armtd/td-script:2019.09"
     _env:
-        TD_API_KEY: ${secret:apikey}
-        TD_API_SERVER: ${secret:endpoint}
+        TD_API_KEY: ${secret:td.apikey}
+        TD_API_SERVER: ${secret:td.endpoint}
 
 +write_into_td:
     py>: py_scripts.examples.write_td_table
     database_name: pandas_test
     table_name: my_df
     docker:
-        image: "digdag/digdag-python:3.7"
+        image: "armtd/td-script:2019.09"
     _env:
-        TD_API_KEY: ${secret:apikey}
-        TD_API_SERVER: ${secret:endpoint}
+        TD_API_KEY: ${secret:td.apikey}
+        TD_API_SERVER: ${secret:td.endpoint}
