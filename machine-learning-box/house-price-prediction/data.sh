@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -x
+
 if [ -z $(which td) ]; then
   echo "You first need to install Treasure Data Toolbelt: http://toolbelt.treasuredata.com/"
   exit 1
