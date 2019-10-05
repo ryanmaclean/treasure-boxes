@@ -4,7 +4,7 @@ This workflow retrieves the detail of jobs in status `queued` and `running` ever
 # Installation
 
 ## Create a destination table if you haven't yet.
-You can change DB and Table as you want. Modify `td.database` and `td.table` under the `_export:`.
+You can change DB and Table as you want. Modify `td.database` and `td.table` under the `_export:` in the [job-monitoring.dig](./job-monitoring.dig).
 
 |Variable|Description|Default|
 |:---|:---|:---|
@@ -17,7 +17,7 @@ Both databasen and table will be created if not exist.
 All of four variables are required.
 ```
 $ td wf push job-monitoring
-$ td wf secrets --project job-monitoring --set td.apikey td.apiserver td.database td.table
+$ td wf secrets --project job-monitoring --set td.apikey td.apiserver
 ```
 
 |Variable|Description|Example|

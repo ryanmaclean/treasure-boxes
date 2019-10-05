@@ -4,9 +4,6 @@
 import os
 import sys
 
-# for pytd
-os.system(f"{sys.executable} -m pip install --user -U git+https://github.com/treasure-data/pytd#egg=pytd[spark]")
-
 import pytd
 from pytd.dbapi import connect
 import requests
@@ -39,7 +36,7 @@ def call_api(sql, url, replaced_param):
     default_engine=os.environ.get('td_engine')
     )
   conn = connect(client)
-  
+
   print("API call start:")
   for index, row in fetch_row(sqlcontent, conn):
     u = url.replace(replaced_param, row)

@@ -1,6 +1,6 @@
 +step1:
   docker:
-    image: "armtd/td-ml:2019.09.3-stretch"
+    image: "armtd/td-script:2019.09.3"
 
   py>: scripts.ytm.call_api
   sql: queries/get_userlist.sql
@@ -11,4 +11,3 @@
      td_endpoint: "https://api.treasuredata.co.jp/"
      td_database: YOUR_DATABASE
      td_engine: presto # presto or hive
-     SPARK_LOCAL_IP: "127.0.0.1" # Do Not Change
